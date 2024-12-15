@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Developer</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #007BFF, #6610F2, #6F42C1);
+            color: #333;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 400px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 20px;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .profile-header {
+            background: linear-gradient(135deg, #6F42C1, #007BFF);
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .profile-content {
+            margin-top: 15px;
+            line-height: 1.8;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Button Back */
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container Profil -->
+    <div class="profile-container">
+        <div class="profile-header">
+            Biodata Developer
+        </div>
+        <div class="profile-content">
+            <ul>
+                <li><strong>Nama:</strong> Paul Hegemur</li>
+                <li><strong>Tempat, Tanggal Lahir:</strong> Jayapura, 30 Mei 2003</li>
+                <li><strong>Status:</strong> Mahasiswa Politeknik Negeri Fakfak</li>
+                <li>
+                    <strong>Tujuan Pengembangan Aplikasi:</strong> <br>
+                    Membuat aplikasi sederhana ini bertujuan untuk meningkatkan keterampilan dan pengetahuan dalam pengembangan aplikasi, sebagai bagian dari proses belajar dan eksplorasi dunia teknologi.
+                </li>
+            </ul>
+            <a href="menu.html" class="btn-back">Kembali ke Menu</a>
+        </div>
+    </div>
+</body>
+</html>

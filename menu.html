@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #FF416C, #FF4B2B, #FFC247, #32CD32, #00BFFF, #8A2BE2);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar i {
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Icon Buttons */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .icon-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .icon-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon-button img {
+            width: 60%;
+            height: 60%;
+        }
+
+        /* Settings Icon */
+        .settings {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .settings img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="menu-container">
+        <!-- First Icon Button -->
+        <div class="icon-button" onclick="window.location.href='profil.html'">
+            <img src="https://img.icons8.com/ios-filled/100/000000/developer.png" alt="Developer">
+        </div>
+        
+        <!-- Second Icon Button -->
+        <div class="icon-button" onclick="menuAction('Information')">
+            <img src="https://img.icons8.com/ios-filled/100/000000/info.png" alt="Information">
+        </div>
+    </div>
+
+    <!-- Settings Icon -->
+    <div class="settings" onclick="menuAction('Settings')">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/settings.png" alt="Settings">
+    </div>
+
+    <!-- FontAwesome for Navbar Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Function for Menu Actions
+        function menuAction(menuName) {
+            alert(menuName + " clicked!");
+        }
+    </script>
+</body>
+</html>
